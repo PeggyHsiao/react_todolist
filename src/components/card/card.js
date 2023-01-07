@@ -1,38 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
+
+import Navbar  from './Navbar';
+import Sidebar from './Sidebar';
 // import Home from './home';
 // import List from './list';
 // import Form from './form';
 
-import '../css/card.css';
-class Navbar extends Component {
-    constructor() {
-        super()
-        this.state = {
-            navlist: [
-                { id: 1, text: 'home' },
-                { id: 2, text: 'list' },
-                { id: 3, text: 'form' },
-            ],
-            currentId: 1
-        }
-    }
-    changePage(id) {
-        this.setState({ currentId: id });
-    }
-    render() {
-        return (
-            <ul className='pageUl'>
-                {
-                    this.state.navlist.map(i =>
-                        <li key={i.id} className={this.state.currentId === i.id ? 'active' : ''} onClick={() => { this.changePage(i.id) }}>{i.text.toUpperCase()}</li>)
-                }
-            </ul>
-        )
-    }
-}
 
-class Page extends Component {
+class PageTitle extends Component {
     static propTypes = {
         title:PropTypes.string
     }
@@ -49,10 +25,18 @@ class Page extends Component {
 
 class Card extends Component {
     render() {
+        const propsObj = {
+            baColor: 'yellow',
+            width: 100
+        }
         return (
             <React.Fragment>
+                <PageTitle />
+
+                {/* <Sidebar baColor="yellow"/> */}
+                <Sidebar {...propsObj} />
+
                 <Navbar />
-                <Page />
             </React.Fragment>
         )
     }

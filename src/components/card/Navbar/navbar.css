@@ -2,7 +2,7 @@
   height: calc(100vh - 50px);
 }
 
-ul {
+.pageUl {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -15,18 +15,18 @@ ul {
     margin: 0;
 }
 
-ul li {
+.pageUl li {
     width: 100%;
     background-color: rgb(3, 87, 87);
     color: rgb(228, 228, 228);
     text-align: center;
 }
-ul li:hover {
+.pageUl li:hover {
     background-color: rgb(8, 114, 114); 
     cursor: pointer;
 }
 
-ul .active {
+.pageUl .active {
     background-color: rgb(9, 124, 124);  
     font-weight: bold;
     color: white;
