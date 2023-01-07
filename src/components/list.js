@@ -6,7 +6,8 @@ export default class List extends Component {
   constructor(){
     super()
     this.state = {
-      contents: []
+      contents: [],
+      htmlCode: `<h1>To Do List</h1>`
     }    
   }
 
@@ -31,6 +32,8 @@ export default class List extends Component {
       
       return(
           <div>
+              <span dangerouslySetInnerHTML={{ __html: this.state.htmlCode }}></span>
+
               <input ref={this.inputRef} type="text" />
               <button onClick={ () => this.addContent(this.inputRef.current.value) }>Add</button>
               
@@ -41,6 +44,10 @@ export default class List extends Component {
                       )
                   }
               </ul>
+              
+              {
+                !this.state.contents.length && <p>No data.</p>
+              }              
           </div>
       )
   }
