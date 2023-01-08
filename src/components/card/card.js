@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 import Navbar  from './Navbar';
 import Sidebar from './Sidebar';
+// import List from '../list';
 // import Home from './home';
-// import List from './list';
+import List from './list';
 // import Form from './form';
 
 
@@ -37,6 +38,7 @@ class Card extends Component {
                 <Sidebar {...propsObj} />
 
                 <Navbar />
+                <List />
             </React.Fragment>
         )
     }
