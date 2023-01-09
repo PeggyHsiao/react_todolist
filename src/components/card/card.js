@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
 
-import Navbar  from './Navbar';
-import Sidebar from './Sidebar';
-import ToDoList from '../todolist';
-// import Home from './home';
-// import List from './list';
-// import Form from './form';
+import Sidebar from './sidebar';
+import Home from './home';
+import List from './list';
+import Form from './form';
+import './navbar.css';
 
 
 class PageTitle extends Component {
@@ -25,6 +24,32 @@ class PageTitle extends Component {
 } 
 
 class Card extends Component {
+    constructor() {
+        super()
+        this.state = {
+            navlist: [
+                { id: 1, text: 'home' },
+                { id: 2, text: 'list' },
+                { id: 3, text: 'form' },
+            ],
+            currentId: 1
+        }
+    }
+    changePage(id) {
+        this.setState({ currentId: id });
+    }
+    whichPage() {
+        switch (this.state.currentId) {
+            case 1:
+               return <Home/>
+            case 2:
+                return <List/>
+            case 3:
+                return <Form/>
+            default:
+                return null;
+        }
+    }
     render() {
         const propsObj = {
             baColor: 'yellow',
@@ -37,8 +62,14 @@ class Card extends Component {
                 {/* <Sidebar baColor="yellow"/> */}
                 <Sidebar {...propsObj} />
 
-                <Navbar />
-                <ToDoList />
+                <ul className='pageUl'>
+                    {
+                        this.state.navlist.map(i =>
+                            <li key={i.id} className={this.state.currentId === i.id ? 'active' : ''} onClick={() => { this.changePage(i.id) }}>{i.text.toUpperCase()}</li>)
+                    }
+                </ul>
+
+                { this.whichPage() }
             </React.Fragment>
         )
     }
