@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//import List from './components/list';
-import Card from "./components/Card/card";
+import ParentAndChild from "./components/ParentAndChild";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Card />
+    <ParentAndChild />
   </React.StrictMode>
 );
