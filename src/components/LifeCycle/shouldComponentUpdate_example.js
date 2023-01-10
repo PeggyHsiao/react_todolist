@@ -9,7 +9,7 @@ class Box extends Component {
     }
     render(){
         console.log('render')
-        
+
         const { index, current } = this.props;
         const styleObj = {
             width: 100,
