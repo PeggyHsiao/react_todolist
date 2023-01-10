@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // import ParentAndChild from "./components/ParentAndChild";
-import BrotherCommunicate from "./components/BrotherCommunicate/context";
+import LifeCycle from "./lifeCycle";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrotherCommunicate />
+    <LifeCycle />
   </React.StrictMode>
 );
