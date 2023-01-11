@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // import ParentAndChild from "./components/ParentAndChild";
-import App from "./components/Hook/useMemo";
+import App from "./components/Hook/useContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
