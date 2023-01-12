@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// import ParentAndChild from "./components/ParentAndChild";
-import App from "./components/Hook/useCustomHook";
+import App from "./components/RouterExample";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

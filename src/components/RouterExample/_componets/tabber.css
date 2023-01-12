@@ -1,0 +1,27 @@
+.tabber {
+    list-style-type: none;
+    height: 60px;
+    line-height: 60px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.tabber li {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+.tabber li:hover {
+    background-color: #F0F0F0;
+}
+.tabber li a {
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+}
+.tabber .active {
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -1,0 +1,28 @@
+.navbar {
+    list-style-type: none;
+    height: 64px;
+    line-height: 64px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+}
+.navbar li:hover {
+    background-color: rgb(84, 143, 145);
+}
+.navbar li a {
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+}
+.navbar .active {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
