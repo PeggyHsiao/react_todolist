@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import App from "./components/RouterExample";
+import App from "./components/Proxy";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
