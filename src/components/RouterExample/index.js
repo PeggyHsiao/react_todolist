@@ -1,7 +1,7 @@
 import React from 'react';
 import RootRouter from './router';
 
-import Navbar from './_componets/Navbar';
+import Navbar from './_components/Navbar';
 export default function App() {
     return(
         <React.Fragment>

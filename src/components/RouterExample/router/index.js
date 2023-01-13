@@ -22,9 +22,15 @@ export default function RootRouter(props) {
                 <Route path="/home" component={Home} />
                 <Route path="/product" component={Product} />
                 <Route path="/detail/:id" component={Detail} />
-                <Route path="/shopping" render={() => {
-                    return isAuth() ? <Shopping/> : <Redirect to="/login" />
+
+                {/* 沒有透過component實例化<Shopping/>，則不會有location、match等props */}
+                {/* 可以在render function帶入props傳入，或使用withRouter包一層 */}
+                <Route path="/shopping" render={(props) => {
+                    return isAuth() ? <Shopping {...props}/> : <Redirect to="/login" />
                 }} />
+                {/* <Route path="/shopping" render={() => {
+                    return isAuth() ? <Shopping/> : <Redirect to="/login" />
+                }} /> */}
 
                 <Redirect from="/" to="/home" exact/>
                 <Route component={NotFound}/>

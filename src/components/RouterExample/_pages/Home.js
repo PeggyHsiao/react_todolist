@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import { Route, Redirect } from 'react-router-dom';
 
-import Tabber from '../_componets/Tabber';
+import Tabber from '../_components/Tabber';
 import Note1 from '../_pages/Note1';
 import Note2 from '../_pages/Note2';
 
